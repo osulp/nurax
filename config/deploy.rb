@@ -2,10 +2,14 @@
 lock "3.9.0"
 
 set :application, "nurax"
-set :repo_url, "https://github.com/curationexperts/nurax.git"
+set :repo_url, "https://github.com/osulp/nurax.git"
 set :deploy_to, '/opt/nurax'
 set :rails_env, 'production'
 set :ssh_options, keys: ['nurax-dev-deploy_rsa'] if File.exist?('nurax-dev-deploy_rsa')
+
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v10.15.3'
+set :nvm_map_bins, %w{node npm yarn}
 
 # Default branch is :master
 set :branch, ENV['REVISION'] || ENV['BRANCH'] || ENV['BRANCH_NAME'] || 'master'
