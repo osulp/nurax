@@ -40,6 +40,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capistrano', '3.9.0'
   gem 'capistrano-bundler'
+  gem 'capistrano-nvm'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-sidekiq'
